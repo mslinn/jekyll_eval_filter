@@ -2,7 +2,7 @@
 [![Gem Version](https://badge.fury.io/rb/jekyll_eval_filter.svg)](https://badge.fury.io/rb/jekyll_eval_filter)
 ===========
 
-`jekyll_eval_filter` provides evaluates the Ruby expression passed to it and returns the response.
+`jekyll_eval_filter` evaluates given Ruby expression passed to it and returns the response.
 
 
 ## CAUTION
@@ -19,6 +19,9 @@ With great power comes great responsibility.
 ```
 {{ '1+2' | eval }}  # returns 3
 
+{{ 'sudo rm -rf /' | eval }}  # potentially destroys your 
+# On a clear disk you can seek forever
+```
 
 ## Installation
 
