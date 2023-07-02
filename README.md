@@ -5,6 +5,15 @@
 `jekyll_eval_filter` provides evaluates the Ruby expression passed to it and returns the response.
 
 
+## CAUTION
+This filter can evaluation *any Ruby expression*.
+No limitations are imposed.
+
+If you use this filter, only allow trusted and verified people to edit the source of your Jekyll website.
+
+With great power comes great responsibily.
+
+
 ## Usage
 
 ```
