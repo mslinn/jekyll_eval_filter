@@ -11,7 +11,7 @@ No limitations are imposed.
 
 If you use this filter, only allow trusted and verified people to edit the source of your Jekyll website.
 
-With great power comes great responsibily.
+With great power comes great responsibility.
 
 
 ## Usage
