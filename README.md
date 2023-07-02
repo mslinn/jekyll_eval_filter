@@ -19,7 +19,7 @@ With great power comes great responsibility.
 ```
 {{ '1+2' | eval }}  # returns 3
 
-{{ 'sudo rm -rf /' | eval }}  # potentially destroys your 
+{{ 'sudo rm -rf /' | eval }}  # potentially destroys your system
 # On a clear disk you can seek forever
 ```
 
