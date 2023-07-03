@@ -33,7 +33,7 @@ gem 'jekyll_eval_filter'
 
 And then execute:
 ```bash
-$ bundle 
+$ bundle
 ```
 
 
