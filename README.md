@@ -17,9 +17,9 @@ With great power comes great responsibility.
 ## Usage
 
 ```
-{{ '1+2' | eval }}  # returns 3
+{{ '1+2' | evaluate }}  # returns 3
 
-{{ 'sudo rm -rf /' | eval }}  # potentially destroys your system
+{{ 'sudo rm -rf /' | evaluate }}  # potentially destroys your system
 # On a clear disk you can seek forever
 ```
 
