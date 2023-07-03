@@ -5,8 +5,7 @@ Gem::Specification.new do |spec|
 
   spec.authors               = ['Mike Slinn']
   spec.description           = <<~END_DESC
-    Write a longer description of the gem.
-    Use as many lines as you like.
+    Evaluates input. Caution! Input can be any Ruby expression.
   END_DESC
   spec.email                 = ['mslinn@mslinn.com']
   spec.files                 = Dir['.rubocop.yml', 'LICENSE.*', 'Rakefile', '{lib,spec}/**/*', '*.gemspec', '*.md']
@@ -26,8 +25,8 @@ Gem::Specification.new do |spec|
 
   END_MESSAGE
   spec.require_paths         = ['lib']
-  spec.required_ruby_version = '>= 3.1.0'
-  spec.summary               = 'Write summary of what the gem is for'
+  spec.required_ruby_version = '>= 2.6.0'
+  spec.summary               = 'Evaluates input. Caution! Input can be any Ruby expression.'
   spec.version               = JekyllEvalFilter::VERSION
 
   spec.add_dependency 'geminabox', '>= 2.2.1'

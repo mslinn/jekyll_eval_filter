@@ -1,5 +1,6 @@
 require 'jekyll_plugin_logger'
 
+# Sample Jekyll filter.
 module JekyllEvalFilter
   class << self
     attr_accessor :logger
@@ -12,14 +13,14 @@ module JekyllEvalFilter
   # @param input_string [String].
   # @return [String] input string and the evaluation result.
   # @example Use like this:
-  #   {{ '11 + 21/3' | <%= filter_name %> }} => "<pre>11 + 21/3 = 18</pre>"
+  #   {{ 'TODO: show typical input' | eval }} => "TODO: show output"
   def evaluate(input_string)
-    MyJekyllFilter.logger.debug { "input_string=#{input_string}" }
-    result = Kernel.eval input_string.strip
-    result
+    input_string.strip!
+    JekyllEvalFilter.logger.debug { "input_string=#{input_string}" }
+    Kernel.eval input_string.strip
   end
 
-  PluginMetaLogger.instance.logger.info { "Loaded #{self.class} plugin." }
+  PluginMetaLogger.instance.logger.info { 'Loaded evaluate Liquid filter.' }
 end
 
 Liquid::Template.register_filter JekyllEvalFilter
