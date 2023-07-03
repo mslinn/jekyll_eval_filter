@@ -29,7 +29,6 @@ Gem::Specification.new do |spec|
   spec.summary               = 'Evaluates input. Caution! Input can be any Ruby expression.'
   spec.version               = JekyllEvalFilter::VERSION
 
-  spec.add_dependency 'geminabox', '>= 2.2.1'
   spec.add_dependency 'jekyll', '>= 3.5.0'
   spec.add_dependency 'jekyll_plugin_support', '>= 0.7.0'
 end
