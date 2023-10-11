@@ -1,11 +1,10 @@
-`jekyll_eval_filter`
-[![Gem Version](https://badge.fury.io/rb/jekyll_eval_filter.svg)](https://badge.fury.io/rb/jekyll_eval_filter)
-===========
+# `jekyll_eval_filter` [![Gem Version](https://badge.fury.io/rb/jekyll_eval_filter.svg)](https://badge.fury.io/rb/jekyll_eval_filter)
 
 `jekyll_eval_filter` evaluates given Ruby expression passed to it and returns the response.
 
 
 ## CAUTION
+
 This filter can evaluation *any Ruby expression*.
 No limitations are imposed.
 
@@ -16,12 +15,13 @@ With great power comes great responsibility.
 
 ## Usage
 
-```
+```html
 {{ '1+2' | evaluate }}  # returns 3
 
 {{ 'sudo rm -rf /' | evaluate }}  # potentially destroys your system
 # On a clear disk you can seek forever
 ```
+
 
 ## Installation
 
@@ -32,12 +32,14 @@ gem 'jekyll_eval_filter'
 ```
 
 And then execute:
+
 ```bash
 $ bundle
 ```
 
 
 ## Additional Information
+
 More information is available on
 [Mike Slinn&rsquo;s website](https://www.mslinn.com/jekyll/10400-jekyll-plugin-template-collection.html).
 
@@ -50,6 +52,7 @@ You can also run `bin/console` for an interactive prompt that will allow you to 
 
 
 ### Build and Install Locally
+
 To build and install this gem onto your local machine, run:
 
 ```shell
@@ -59,7 +62,8 @@ jekyll_eval_filter (1.0.0) installed.
 ```
 
 Examine the newly built gem:
-```
+
+```shell
 $ gem info jekyll_eval_filter
 
 *** LOCAL GEMS ***
@@ -76,13 +80,17 @@ jekyll_eval_filter (1.0.0)
 
 
 ### Build and Push to RubyGems
+
 To release a new version,
+
   1. Update the version number in `version.rb`.
   2. Commit all changes to git; if you don't the next step might fail with an unexplainable error message.
   3. Run the following:
+
      ```shell
      $ bundle exec rake release
      ```
+
      The above creates a git tag for the version, commits the created tag,
      and pushes the new `.gem` file to [RubyGems.org](https://rubygems.org).
 
