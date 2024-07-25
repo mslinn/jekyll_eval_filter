@@ -1,5 +1,4 @@
 require:
-  # - rubocop-jekyll
   - rubocop-md
   - rubocop-performance
   - rubocop-rake
@@ -7,51 +6,59 @@ require:
 
 AllCops:
   Exclude:
+    - _site/**/*
     - binstub/**/*
-    - exe/**/*
-    - vendor/**/*
     - Gemfile*
+    - exe/**/*
+    - jekyll/**/*
+    - vendor/**/*
   NewCops: enable
-
-Gemspec/DeprecatedAttributeAssignment:
-  Enabled: false
+  TargetRubyVersion: 2.6
 
 Gemspec/RequireMFA:
-  Enabled: false
-
-Gemspec/RequiredRubyVersion:
   Enabled: false
 
 Layout/HashAlignment:
   EnforcedColonStyle: table
   EnforcedHashRocketStyle: table
 
+Layout/LeadingCommentSpace:
+  Exclude:
+    - _bin/**/*
+
 Layout/LineLength:
   Max: 150
 
+Layout/FirstHashElementIndentation:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+
 Metrics/AbcSize:
-  Max: 35
+  Max: 40
 
 Metrics/BlockLength:
-  Exclude:
-    - jekyll_eval_filter.gemspec
-  Max: 30
+  Max: 50
 
 Metrics/CyclomaticComplexity:
   Max: 15
 
 Metrics/MethodLength:
-  Max: 40
-
-Metrics/ModuleLength:
-  Enabled: false
+  Max: 30
 
 Metrics/PerceivedComplexity:
-  Max: 15
+  Max: 20
 
 Naming/FileName:
   Exclude:
-    - Rakefile
+    - "_bin/**/*"
+    - "*.md"
+
+Style/Alias:
+  Exclude:
+    - _plugins/symlink_watcher.rb
+    - blog/bin/avImport
 
 Style/Documentation:
   Enabled: false
@@ -59,15 +66,24 @@ Style/Documentation:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
+Style/HashSyntax:
+  EnforcedStyle: ruby19
+  EnforcedShorthandSyntax: consistent
+
+Style/PercentLiteralDelimiters:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
-
-RSpec/FilePath:
-  IgnoreMethods: true
-  SpecSuffixOnly: true
-
-RSpec/ExampleLength:
-  Max: 30
-
-RSpec/MultipleExpectations:
-  Max: 15

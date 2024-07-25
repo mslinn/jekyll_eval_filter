@@ -30,6 +30,6 @@ Gem::Specification.new do |spec|
   spec.version               = JekyllEvalFilter::VERSION
 
   spec.add_dependency 'jekyll', '>= 3.5.0'
-  spec.add_dependency 'jekyll_plugin_support', '>= 0.7.0'
+  spec.add_dependency 'jekyll_plugin_support', '>= 1.0.0'
   spec.add_dependency 'nokogiri', '>= 1.16.2'
 end

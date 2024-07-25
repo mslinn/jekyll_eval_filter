@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '>= 4.3.2'
+gem 'jekyll', '>= 4.3.3'
 
 group :jekyll_plugins do
   gem 'classifier-reborn'
   gem 'html-proofer'
   gem 'jekyll-assets', git: 'https://github.com/envygeeks/jekyll-assets'
   gem 'jekyll-environment-variables'
-  gem 'jekyll_eval_filter', path: '../'  # use unreleased gem dependencies defined in the parent project
+  gem 'jekyll_eval_filter', path: '../' # use unreleased gem dependencies defined in the parent project
   gem 'jekyll-tagging'
 end
 

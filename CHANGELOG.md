@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.1.3
+
+* Compatible with `jekyll_plugin_support` v1.0.0
+
 
 ## 0.1.2
 
