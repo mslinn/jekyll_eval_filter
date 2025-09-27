@@ -18,6 +18,9 @@ module JekyllEvalFilter
     input_string.strip!
     JekyllEvalFilter.logger.debug { "input_string=#{input_string}" }
     Kernel.eval input_string.strip
+  rescue StandardError => e
+    JekyllEvalFilter.logger.error e.message
+    e.message
   end
 
   PluginMetaLogger.instance.logger.info { 'Loaded evaluate Liquid filter.' }
